@@ -18,7 +18,7 @@ void fnc_add(stack_t **head, unsigned int t_tally)
 	}
 	if (length < 2)
 	{
-		fprintf(stderr, "L%d: denied, stack length error\n", t_tally);
+		fprintf(stderr, "L%d: can't add, stack too short\n", t_tally);
 		fclose(sub.file);
 		free(sub.f_content);
 		free_stack(*head);
