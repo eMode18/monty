@@ -9,7 +9,7 @@ void fnc_pint(stack_t **head, unsigned int t_tally)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%u: Stack empty, pint err\n", t_tally);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", t_tally);
 		fclose(sub.file);
 		free(sub.f_content);
 		free_stack(*head);
