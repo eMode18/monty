@@ -18,13 +18,13 @@ void fnc_push(stack_t **head, unsigned int t_tally)
 			if (sub.arg_v[b] > 57 || sub.arg_v[b] < 48)
 				ind = 1; }
 		if (ind == 1)
-		{ fprintf(stderr, "L%d: usage: push\n", t_tally);
+		{ fprintf(stderr, "L%d: usage: push integer\n", t_tally);
 			fclose(sub.file);
 			free(sub.f_content);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
-	{ fprintf(stderr, "L%d: usage: push\n", t_tally);
+	{ fprintf(stderr, "L%d: usage: push integer\n", t_tally);
 		fclose(sub.file);
 		free(sub.f_content);
 		free_stack(*head);

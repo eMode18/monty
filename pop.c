@@ -11,7 +11,7 @@ void fnc_pop(stack_t **head, unsigned int t_tally)
 
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%d: denied, stack empty - pop err\n", t_tally);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", t_tally);
 		fclose(sub.file);
 		free(sub.f_content);
 		free_stack(*head);
