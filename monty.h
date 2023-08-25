@@ -51,10 +51,14 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+void execute(char *line, stack_t **stack, unsigned int line_number, FILE *file);
+
 void fnc_push(stack_t **head, unsigned int numeral);
 void fnc_pall(stack_t **head, unsigned int numeral);
 void fnc_pint(stack_t **head, unsigned int numeral);
 void free_stack(stack_t *head);
+int exec(char *content, stack_t **stack, unsigned int counter, FILE *file);
 void fnc_queue(stack_t **head, unsigned int t_tally);
 void fnc_pop(stack_t **head, unsigned int t_tally);
 void fnc_swap(stack_t **head, unsigned int t_tally);
